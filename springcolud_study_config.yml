@@ -25,4 +25,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-test.com:7001/eureka/
-© 2020 GitHub, Inc.
