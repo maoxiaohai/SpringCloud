@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
+        <module name="zk80" />
+        <module name="consumer80" />
+        <module name="consumer_openFeign" />
+        <module name="provider8002" />
+        <module name="provider8001" />
+        <module name="apiDoc" />
+        <module name="eureca-7002" />
+        <module name="eureca-7001" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="apiDoc" target="1.8" />
+      <module name="consumer80" target="1.8" />
+      <module name="consumer_openFeign" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="eureca-7001" target="1.8" />
+      <module name="eureca-7002" target="1.8" />
+      <module name="provider8001" target="1.8" />
+      <module name="provider8002" target="1.8" />
+      <module name="SpringCloud_Learning" target="1.8" />
+      <module name="test" target="1.8" />
+      <module name="zk80" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+    </option>
+  </component>
+</project>
