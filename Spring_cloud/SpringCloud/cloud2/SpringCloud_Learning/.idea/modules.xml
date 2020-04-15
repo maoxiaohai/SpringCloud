@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HystrixConsumer8001/HystrixConsumer8001.iml" filepath="$PROJECT_DIR$/HystrixConsumer8001/HystrixConsumer8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringCloud_Learning.iml" filepath="$PROJECT_DIR$/.idea/SpringCloud_Learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apiDoc/apiDoc.iml" filepath="$PROJECT_DIR$/apiDoc/apiDoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer80/consumer80.iml" filepath="$PROJECT_DIR$/consumer80/consumer80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer_openFeign/consumer_openFeign.iml" filepath="$PROJECT_DIR$/consumer_openFeign/consumer_openFeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureca-7001/eureca-7001.iml" filepath="$PROJECT_DIR$/eureca-7001/eureca-7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureca-7002/eureca-7002.iml" filepath="$PROJECT_DIR$/eureca-7002/eureca-7002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix8001/hystrix8001.iml" filepath="$PROJECT_DIR$/hystrix8001/hystrix8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix_Dashboard/hystrix_Dashboard.iml" filepath="$PROJECT_DIR$/hystrix_Dashboard/hystrix_Dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider8001/provider8001.iml" filepath="$PROJECT_DIR$/provider8001/provider8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider8002/provider8002.iml" filepath="$PROJECT_DIR$/provider8002/provider8002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zk80/zk80.iml" filepath="$PROJECT_DIR$/zk80/zk80.iml" />
+    </modules>
+  </component>
+</project>
