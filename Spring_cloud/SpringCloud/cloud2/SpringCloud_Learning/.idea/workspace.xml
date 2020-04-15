@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7081c8fd-ec53-47be-92e6-c14545385517" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +60,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
     <property name="last_opened_file_path" value="$PROJECT_DIR$/HystrixProvider8001/src/main/resources" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Forum" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -81,9 +86,27 @@
   <component name="RequestMappingsEndpointTabSettings">
     <option name="showLibraryMappings" value="false" />
   </component>
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
   <component name="RunManager" selected="Spring Boot.gateway">
     <configuration name="HystrixConsumer8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="HystrixConsumer8001" />
+=======
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.consumer80">
+    <configuration name="consumer80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="consumer80" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.*" />
@@ -95,28 +118,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
     <configuration name="dashboard" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="hystrix_Dashboard" />
+=======
+    <configuration name="eureca7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eureca-7001" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dashboard" />
+=======
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eureca7001" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
     <configuration name="eureca7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="eureca-7001" />
+=======
+    <configuration name="eureca7002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eureca-7002" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.eureca7001" />
+=======
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eureca7002" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,8 +175,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
     <configuration name="gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Gateway9527" />
+=======
+    <configuration name="provider8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="provider8002" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.*" />
@@ -148,6 +194,7 @@
       </method>
     </configuration>
     <list>
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
       <item itemvalue="Spring Boot.eureca7002" />
       <item itemvalue="Spring Boot.eureca7001" />
       <item itemvalue="Spring Boot.HystrixConsumer8001" />
@@ -159,6 +206,19 @@
         <item itemvalue="Spring Boot.gateway" />
         <item itemvalue="Spring Boot.dashboard" />
         <item itemvalue="Spring Boot.HystrixConsumer8001" />
+=======
+      <item itemvalue="Spring Boot.provider8001" />
+      <item itemvalue="Spring Boot.eureca7002" />
+      <item itemvalue="Spring Boot.eureca7001" />
+      <item itemvalue="Spring Boot.provider8002" />
+      <item itemvalue="Spring Boot.consumer80" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.consumer80" />
+        <item itemvalue="Spring Boot.provider8002" />
+        <item itemvalue="Spring Boot.provider8001" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
         <item itemvalue="Spring Boot.eureca7001" />
         <item itemvalue="Spring Boot.eureca7002" />
       </list>
@@ -178,6 +238,7 @@
       <workItem from="1586517159317" duration="5370000" />
       <workItem from="1586522542698" duration="1420000" />
       <workItem from="1586570272196" duration="75000" />
+<<<<<<< Updated upstream:Spring_cloud/SpringCloud/cloud2/SpringCloud_Learning/.idea/workspace.xml
       <workItem from="1586570430015" duration="26653000" />
       <workItem from="1586748606029" duration="2067000" />
       <workItem from="1586775830423" duration="3951000" />
@@ -185,11 +246,29 @@
       <workItem from="1586828260313" duration="1204000" />
       <workItem from="1586852801705" duration="14980000" />
       <workItem from="1586914838626" duration="9944000" />
+=======
+      <workItem from="1586570430015" duration="26354000" />
+      <workItem from="1586678306509" duration="2830000" />
+      <workItem from="1586682896520" duration="831000" />
+>>>>>>> Stashed changes:cloud2/SpringCloud_Learning/.idea/workspace.xml
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1586591093511">
