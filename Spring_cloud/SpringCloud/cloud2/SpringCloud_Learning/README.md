@@ -431,6 +431,38 @@ public class dashboard {
 ```
 #### 6.测试
 访问127.0.0.1:9001/hystrix,出现监控界面，然后在其中加入被监控服务的url 127.0.0.1:8001/hystrix.stream.最后访问consumer8001的接口，在监控界面中会有调用信息。
+### 七、Cloud-Gateway的使用
+#### 1.初步使用GateWay
+##### 1.step1：引入依赖
+由于gateway是由netty+webflux实现的，所以不需要再引入web模块。只需要添加gateway模块。如下所示:
+```xml
+<!-- gateway-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+        </dependency>
+    </dependencies>
+```
+##### 2.step2添加配置文件
+```yml
+server:
+  port: 9527 #服务端口
+
+
+spring:
+  application:
+    name: gateway9527  //服务名称
+  cloud:
+    gateway:
+      routes:
+        - id: gateway_simple  //自定义的路由ID(唯一,因为可以定义多个路由)，
+          uri: http://www.ityouknow.com //匹配的uri
+          predicates:
+            - Path=/spring-cloud   //路由条件，最终的调用URL为URI+path
+```
+##### 3.测试：
+访问127.0.0.1:9527/spring-cloud(注意这里需要加上spring-cloud)，最终会访问到连接http://www.ityouknow.com/spring-cloud(注意这里的最后也会加上spring-cloud)
+
 # 问题汇总
 ### 一、创建eureca-7001项目的时候，导入依赖，pom.xml文件出错
 ```xml
@@ -525,6 +557,10 @@ Eureca集群中每个Eureca配置都是相同的，唯一的区别在于
     }
 ```
 成功。
+### 六、使用Git上传失败。
+刚开始误操作把一些不相关的文件上传上去了，导致github上文件夹乱七八糟的，之后使用git pull下拉的时候发现显示是最新版本，但是使用git status的时候，又显示很多问题。
+最后采用git GUI，将一些Unstaged Chagnes的文件sign off，再commmit和push。github上一下就清爽了，但是还是存在一份文件夹，怎么删除都删不掉，最后在本地进这个文件夹下，
+发现有一个.git文件夹，删除掉，再重新上传就正常了。
 
 # 知识点补充
 ### 一、Maven版本管理

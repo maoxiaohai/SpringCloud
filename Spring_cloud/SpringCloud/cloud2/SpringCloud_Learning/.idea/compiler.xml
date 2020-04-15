@@ -10,6 +10,7 @@
         <module name="zk80" />
         <module name="hystrix_Dashboard" />
         <module name="consumer80" />
+        <module name="Gateway9527" />
         <module name="consumer_openFeign" />
         <module name="hystrix8001" />
         <module name="provider8002" />
@@ -27,6 +28,7 @@
       <module name="demo" target="1.8" />
       <module name="eureca-7001" target="1.8" />
       <module name="eureca-7002" target="1.8" />
+      <module name="Gateway9527" target="1.8" />
       <module name="hystrix8001" target="1.8" />
       <module name="hystrix_Dashboard" target="1.8" />
       <module name="HystrixConsumer8001" target="1.8" />
