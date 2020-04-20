@@ -462,7 +462,140 @@ spring:
 ```
 ##### 3.测试：
 访问127.0.0.1:9527/spring-cloud(注意这里需要加上spring-cloud)，最终会访问到连接http://www.ityouknow.com/spring-cloud(注意这里的最后也会加上spring-cloud)
+### 八、Stream的使用
+**1.Stream Provider的使用**
+#### step1:依赖引入
+```xml
+   <!--        引入stream-rabbit-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+```
+#### step2:配置文件
+```yml
+server:
+  port: 8802
 
+spring:
+  application:
+    name: cloud-stream-consumer
+  cloud:
+    stream:
+      binders: # 在此处配置要绑定的rabbitmq的服务信息；
+        defaultRabbit: # 表示定义的名称，用于于binding整合
+          type: rabbit # 消息组件类型
+          environment: # 设置rabbitmq的相关的环境配置
+            spring:
+              rabbitmq:
+                host: 127.0.0.1 # 192.168.179.150
+                port: 5672
+                username: guest
+                password: guest
+      bindings: # 服务的整合处理
+        input: # 这个名字是一个通道的名称
+          destination: studyEX # 表示要使用的Exchange名称定义
+          content-type: application/json # 设置消息类型，本次为json，文本则设置“text/plain”
+          binder: defaultRabbit # 设置要绑定的消息服务的具体设置
+
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 5 # 如果现在超过了5秒的间隔（默认是90秒）
+    instance-id: cloud-stream-consumer8802  # 在信息列表时显示主机名称
+    prefer-ip-address: true     # 访问的路径变为IP地址
+```
+#### 注解及业务
+```java
+    @EnableBinding(Source.class)
+    public class SendMessage implements IMessageProvider{
+    @Resource
+    private MessageChannel output;
+    @Override
+    public String send() {
+        String serial = UUID.randomUUID().toString();
+        output.send(MessageBuilder.withPayload(serial).build());
+        return serial;
+    }
+```
+#### 测试：打开本地的rmq,可以看到配置文件中的 studyEX在rmq中出现。并且调用Provider的Controller之后，可以在rmq界面看到。
+**2.Stream Consumer的使用**
+#### Step1:引入依赖（和生产者的依赖是一样的）
+```xml
+  <!--        引入stream-rabbit-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+```
+#### Step2:加入配置文件
+```yml
+server:
+  port: 8802
+
+spring:
+  application:
+    name: cloud-stream-consumer
+  cloud:
+    stream:
+      binders: # 在此处配置要绑定的rabbitmq的服务信息；
+        defaultRabbit: # 表示定义的名称，用于于binding整合
+          type: rabbit # 消息组件类型
+          environment: # 设置rabbitmq的相关的环境配置
+            spring:
+              rabbitmq:
+                host: 127.0.0.1 # 192.168.179.150
+                port: 5672
+                username: guest
+                password: guest
+      bindings: # 服务的整合处理
+        input: # 这个名字是一个通道的名称
+          destination: studyEX # 表示要使用的Exchange名称定义
+          content-type: application/json # 设置消息类型，本次为json，文本则设置“text/plain”
+          binder: defaultRabbit # 设置要绑定的消息服务的具体设置
+
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 5 # 如果现在超过了5秒的间隔（默认是90秒）
+    instance-id: cloud-stream-consumer8802  # 在信息列表时显示主机名称
+    prefer-ip-address: true     # 访问的路径变为IP地址
+```
+#### Step3:相关注解及业务
+```java
+@EnableBinding(Sink.class)
+public class ConsumerController {
+    @Value("${server.port}")
+    private String serverPort;
+    @StreamListener(Sink.INPUT)
+    public void getMessage(Message<String> message){
+        System.out.println("***********消费者收到消息:"+message.getPayload());
+    }
+}
+```
+#### Step4:测试：调用生产者之后，发现消费者模块控制台输出生产者发送的消息。或者在rmq中发送消息，在消费者中也能收到消息
 # 问题汇总
 ### 一、创建eureca-7001项目的时候，导入依赖，pom.xml文件出错
 ```xml
