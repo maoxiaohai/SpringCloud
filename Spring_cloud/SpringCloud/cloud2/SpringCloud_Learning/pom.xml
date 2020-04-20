@@ -31,6 +31,9 @@
         <module>hystrix8001</module>
         <module>hystrix_Dashboard</module>
         <module>Gateway9527</module>
+        <module>StreamProvider8801</module>
+        <module>streamProvider8801</module>
+        <module>StreamConsumer8802</module>
     </modules>
 
     <properties>
