@@ -34,6 +34,7 @@
         <module>StreamProvider8801</module>
         <module>streamProvider8801</module>
         <module>StreamConsumer8802</module>
+        <module>StreamConsumer8803</module>
     </modules>
 
     <properties>
