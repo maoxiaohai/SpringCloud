@@ -609,7 +609,32 @@ public class ConsumerController {
 而当在配置文件中配置了group属性的时候，是默认支持持久化的。
 
 注意。以上是否存在其他的持久化方案，以及生产者能否发送消息到指定队列均没有测试。
-
+### 九、zipkin的使用
+下载zipkin server jar包之后，运行该jar包，打开127.0.0.1:9411，会有一个监控平台。
+#### Step1: 引入依赖
+```xml
+<!--链路监控包含了sleuth+zipkin-->
+        <!--服务端下载地址：https://dl.bintray.com/openzipkin/maven/io/zipkin/java/zipkin-server/-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+```
+#### Step2: 加入配置文件
+```yml
+spring:
+  application:
+    name: provider
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+    #采样率值介于 0 到 1 之间，1 则表示全部采集
+    probability: 1
+```
+#### Step3: 测试
+打开127.0.0.1:9411，之后可以看到消费者调用生产者的链路消息
+注意：生产者和消费者的依赖引入和配置都是一样的。不区分生产者和消费者。
 # 问题汇总
 ### 一、创建eureca-7001项目的时候，导入依赖，pom.xml文件出错
 ```xml

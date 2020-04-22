@@ -22,6 +22,7 @@ spring:
           content-type: application/json # 设置消息类型，本次为json，文本则设置“text/plain”
           binder: defaultRabbit # 设置要绑定的消息服务的具体设置
 
+
 eureka:
   client: # 客户端进行Eureka注册的配置
     service-url:
