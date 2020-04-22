@@ -35,6 +35,7 @@
         <module>streamProvider8801</module>
         <module>StreamConsumer8802</module>
         <module>StreamConsumer8803</module>
+        <module>cloudAlibabaNacos_Provider9001</module>
     </modules>
 
     <properties>
